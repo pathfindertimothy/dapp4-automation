@@ -6,8 +6,6 @@
   - [Test Suite Structure](#test-suite-structure)
   - [Expectations](#expectations)
 - [Project Information](#project-information)
-  - [Environment Setup](#environment-setup)
-  - [Smart Contract Tests](#smart-contract-tests)
   - [Example ERC20 Token](#example-erc20-token)
 - [Local Environment Setup](#local-environment-setup)
   - [Run with Docker Compose](#run-with-docker-compose)
@@ -15,11 +13,11 @@
 
 ## Requirements
 
-Create a comprehensive suite of end-to-end (e2e) tests for a decentralized application (DApp) that interacts with a smart contract on the Sepolia Testnet. The DApp consists of a smart contract and a Next.js frontend application.
+Fork this repository and create a comprehensive suite of end-to-end (e2e) tests for a decentralized application (DApp) that interacts with a smart contract on the Sepolia Testnet. The DApp consists of a smart contract and a Next.js frontend application. You can access the DApp from [https://qa-challange.netlify.app](https://qa-challange.netlify.app).
 
 ### Test Suite Structure
 
-Organize the e2e tests into feature files within the `e2e` folder, following the Gherkin syntax for behavior-driven development (BDD). Use the following existing feature files as a basis:
+Organize this project as you prefer. Inside the folder `e2e` you will find the the feature files, which following the Gherkin syntax for behavior-driven development (BDD). Use the following existing feature files as a basis for this challenge:
 
 - `01-app-access.feature`
 - `02-search-erc20-token.feature`
@@ -30,10 +28,11 @@ Organize the e2e tests into feature files within the `e2e` folder, following the
 - Test the connection to the user's wallet (e.g., MetaMask)
 - Verify that the ERC20 token address input field works correctly
 - Test the display of the current token balance
-- Verify the deposit amount input field functions properly
 - Test the token transfer process from the wallet to the smart contract
-- [Bonus] Verify the correct display of deposit history
-- [Bonus+] Execute the e2e tests using a GitHub Actions workflow
+- Execute the e2e tests using a GitHub Actions workflow
+- Document how to run tests
+- Be proactive in providing feedback in an MD document about this exercise and share your thoughts on what other aspects should be taken care of to ensure a good level of quality for a web application
+- [Bonus] Display test results in an easily shareable format
 
 ## Project Information
 
@@ -44,18 +43,18 @@ To use this application, you need to:
 1. Install MetaMask on your browser ([Download MetaMask](https://metamask.io/download/))
 2. Connect MetaMask to the Sepolia testnet
 
-### Environment Setup
+## Add Sepolia network to MetaMask
 
-- Set up a testing environment that can interact with the Sepolia Testnet
-- Ensure the ability to deploy and interact with smart contracts programmatically
-- Configure a headless browser for frontend testing
+Network Name: Sepolia
+RPC URL: https://sepolia.infura.io/v3/
+Chain ID: 11155111
+Currency Symbol: SepoliaETH
+Block Explorer URL (Optional): https://sepolia.etherscan.io
 
-### Smart Contract Tests
+Get free ETH from these faucets:
 
-- Test the deployment of the DepositContract
-- Verify the contract's address and ABI are correct
-- Test the deposit function with various valid and invalid inputs
-- Verify that the Deposit event is emitted correctly
+- https://sepoliafaucet.com (connect with Alchemy)
+- https://faucets.chain.link/sepolia
 
 ### Example ERC20 Token
 
