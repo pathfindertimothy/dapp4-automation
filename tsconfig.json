@@ -21,6 +21,6 @@
       "cypress"
     ],
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "cypress.config.ts", "test", "src", "next.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "cypress.config.ts", "test", "src", "next.config.cjs"],
   "exclude": ["node_modules", "e2e", "environment.d.ts"]
 }
