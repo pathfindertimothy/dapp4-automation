@@ -2,13 +2,20 @@
   "name": "fullstack-task",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:e2e": "npx cypress run --browser chrome --headed --reporter cypress-mochawesome-reporter",
+    "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports --inline",
+    "posttest": "yarn run combine-reports && yarn run generate-report"
   },
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
     "@openzeppelin/contracts": "5.0.1",
     "next": "14.0.4",
     "react": "18",
@@ -18,12 +25,23 @@
     "zustand": "4.4.7"
   },
   "devDependencies": {
+    "@synthetixio/synpress": "^4.0.10",
     "@types/node": "20",
     "@types/react": "18",
     "@types/react-dom": "18",
     "autoprefixer": "10.4.16",
+    "cypress": "^14.1.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-multi-reporters": "^2.0.5",
+    "marge": "^1.0.1",
+    "mochawesome-merge": "^5.0.0",
     "postcss": "8.4.32",
     "tailwindcss": "3.3.6",
-    "typescript": "5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinition": false,
+    "stepDefinition": "e2e/e2e/testscript"
   }
 }

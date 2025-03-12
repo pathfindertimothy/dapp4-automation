@@ -15,8 +15,12 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "baseUrl": "http://localhost:3000",
+    "types": [
+      "cypress"
+    ],
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "e2e"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "cypress.config.ts", "test", "src", "next.config.mjs"],
+  "exclude": ["node_modules", "e2e", "environment.d.ts"]
 }
