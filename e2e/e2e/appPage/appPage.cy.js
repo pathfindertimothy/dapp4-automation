@@ -49,6 +49,7 @@ Then('enter deposit amount as {string}', (amount) => {
 
 Then('the user click the deposit button', () => {
     homePageObject.clickTheDepositButton()
+    cy.wait(120000)
 })
 
 // Test for: Test the token transfer process from the wallet to the smart contract
