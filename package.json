@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:e2e": "npx cypress run --browser chrome --headed --reporter cypress-mochawesome-reporter",
-    "posttest": "yarn run combine-reports && yarn run generate-report"
+    "test:e2e": "npx cypress run --browser chrome --headed --reporter cypress-mochawesome-reporter"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
