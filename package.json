@@ -7,8 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test:e2e": "npx cypress run --reporter cypress-mochawesome-reporter"
+    "lint": "next lint"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
