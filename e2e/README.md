@@ -43,6 +43,8 @@
 
   - The last test is commented out as the gas fees are high. 
 
+  - All tests are in one file. Reason being that synpress metamask initialization function cached the browser by default during creation of the metamask wallet.
+
 ## Discussion
 
 The test is sufficient as an accessment to test the skill of a QA personnel. 
