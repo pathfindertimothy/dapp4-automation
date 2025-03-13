@@ -32,7 +32,9 @@
 ## To run test
 
 - Start the app by runing `npm run start`
-- Start the test by runing `npm run e2e`
+- To run the test
+  - Update or replace the cypress script in package.json to: `"test:e2e": "npx cypress run --browser chrome --headed --reporter cypress-mochawesome-reporter"`. The option `--browser chrome` is needed to run the test locally in a chrome browser. It is not needed during github actions as it is already defined in the main.yml file
+  - Start the test by runing `npm run e2e`
 - Report will be seen in `reports` folder
     - Open the `mochawesome` html in the broswer to view the report
 
