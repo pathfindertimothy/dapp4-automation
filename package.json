@@ -9,8 +9,6 @@
     "start": "next start",
     "lint": "next lint",
     "test:e2e": "npx cypress run --browser chrome --headed --reporter cypress-mochawesome-reporter",
-    "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
-    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports --inline",
     "posttest": "yarn run combine-reports && yarn run generate-report"
   },
   "dependencies": {

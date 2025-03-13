@@ -34,7 +34,7 @@ export default defineConfig({
         quite: true,
         overwrite: false,
         html: true,
-        json: true,
+        json: false,
       },
     },
     baseUrl: 'http://localhost:3000',
