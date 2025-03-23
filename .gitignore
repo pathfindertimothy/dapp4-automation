@@ -38,6 +38,7 @@ next-env.d.ts
 # cypress
 /cypress
 /reports
+constants.example.js
 
 # metamask file
 /downloads

@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-   "test:e2e": "npx cypress run --headed --reporter cypress-mochawesome-reporter"
+    "test:e2e": "npx cypress run --headed --reporter cypress-mochawesome-reporter"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
@@ -30,6 +30,7 @@
     "cypress": "^14.1.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-multi-reporters": "^2.0.5",
+    "dotenv": "^16.4.7",
     "marge": "^1.0.1",
     "mochawesome-merge": "^5.0.0",
     "postcss": "8.4.32",

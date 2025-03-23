@@ -27,11 +27,9 @@ Cypress.on('uncaught:exception', () => {
 })
 
 // Initialize Synpress commands
-synpressCommandsForMetaMask()
+// synpressCommandsForMetaMask()
 
-// Visit the base URL before each test
-// before(() => {
-//   cy.wait(2000)
-//   cy.visit('/')
-//   cy.wait(2000)
-// })
+// run before each test
+before(() => {
+  synpressCommandsForMetaMask() 
+})

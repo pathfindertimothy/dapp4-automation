@@ -90,3 +90,6 @@ By selecting this token, the application will allow you to mint 100 tokens at a 
    ```
 
 3. Access the application at [http://localhost:3000](http://localhost:3000) using your browser
+
+## Note:
+- Test can be found in the e2e folder which includes a `README.md` file

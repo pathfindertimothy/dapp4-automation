@@ -38,7 +38,7 @@ export default defineConfig({
       },
     },
     baseUrl: 'http://localhost:3000',
-    specPattern: 'e2e/e2e/*.feature',
+    specPattern: 'e2e/test_steps/*.feature',
     supportFile: 'e2e/support/e2e.{js,jsx,ts,tsx}',
     testIsolation: false,
     async setupNodeEvents(on, config) {
